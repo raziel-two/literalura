@@ -22,4 +22,57 @@ Este desafío forma parte del programa **Oracle Next Education (ONE)** y pone en
 - **Protección contra duplicados:** Evita guardar el mismo libro o autor más de una vez.
 - **Manejo de excepciones en API:** Captura errores de conexión y formato JSON.
 
+## 🕹️ ¿Cómo funciona?
 
+1. **Configura la base de datos:**
+    - Crea una base de datos en PostgreSQL llamada `literalura`.
+    - Configura tus credenciales en el archivo `application.properties`:
+   ```properties
+   spring.datasource.url=jdbc:postgresql://localhost:5432/literalura
+   spring.datasource.username=TU_USUARIO
+   spring.datasource.password=TU_CONTRASEÑA
+   spring.jpa.hibernate.ddl-auto=update
+
+2. **Ejecuta la aplicación:**
+   - Inicia la aplicación desde tu IDE o terminal.
+   - Elige la opción deseada (1-6) o la opción (0) para salir del programa.
+
+
+3. **Resultado:** 
+- El programa consultará la API o la BD en caso de consultar un libro que ya este guardado. Ejemplo de busqueda:
+
+```
+Ingrese el título del libro que desea buscar:
+Don Quijote
+
+LIBRO GUARDADO EN LA BASE DE DATOS:
+📚 Título: Don Quijote
+👤 Autor: Cervantes Saavedra, Miguel de
+🌐 Idioma: es
+⬇️ Descargas: 10926
+```
+
+## 🧠 Conceptos Aplicados
+- **Spring Boot:** Inyección de dependencias, JPA, repositorios y configuración automatizada.
+- **Consumo de API:** Uso de `HttpClient`, `HttpRequest` y `HttpResponse` para consumir **Gutendex**.
+- **Manipulación de JSON:** Mapeo de respuestas JSON a objetos Java mediante la librería **Jackson**.
+- **Persistencia con JPA:** Entidades, repositorios y consultas personalizadas.
+- **Derived Queries:** Métodos de búsqueda personalizados en repositorios.
+- **JPQL:** Consultas avanzadas con `@Query`
+- **Modelado de Datos:** Separación clara entre DTOs (para la API) y Entidades (para la BD).
+- **Manejo de excepciones:** Captura y tratamiento de errores de entrada y conexión.
+
+## 🛠️ Tecnologías usadas
+- **Java JDK 21**.
+- **Spring Boot 3.5.11**
+- **PostgreSQL** 
+- **Jackson** (para procesamiento JSON)
+- **Maven** 
+- **Gutendex API** 
+
+## 👩‍💻 Autor
+Challenge de Alura Latam, Creado por **Raziel** 💙
+
+
+## 📂 Estado del proyecto
+✅ **Completado**
